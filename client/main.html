@@ -1,0 +1,31 @@
+<head>
+  <title>meteorResolutions</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Sniglet" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+      <header>
+        <h1 id="heady">Monthly Resolutions</h1>
+
+        <form class="new-resolution">
+          <input type="text" name="title" placeholder="A new resolution">
+          <input type="submit" value="Submit">
+        </form>
+    </header>
+    {{> addThis }}
+  </div>
+</body>
+
+<template name="addThis">
+  {{#each resolutions}}
+    <div class="{{#if checked}}checked{{/if}}" id="added"> <h1>
+      <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+      <span class="text">{{title}}</span>
+      <button class="delete">Remove</button>
+    </h1>
+      </div>
+    {{/each}}
+</template>
+<!-- div.aiko{$yeo$}>h1#hey$*5>a{$hi} -->
